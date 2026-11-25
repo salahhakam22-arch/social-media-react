@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>route-posts | Route Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="w">
+        <div class="hero">
+            <div class="card l">
+                <span class="pill">Route Academy</span>
+                <h1>route-posts</h1>
+                <p class="lead">A complete social API learning playground with professional docs, clear endpoint
+                    contracts, and fast testing workflow.</p>
+                <div class="chips"><span class="pill">Auth &amp; Users</span><span class="pill">Feed &amp;
+                        Timeline</span><span class="pill">Comments &amp; Mentions</span><span
+                        class="pill">Notifications</span></div>
+                <div class="btns"><a class="btn p" href="#modules">Explore Docs</a><a class="btn" data-k="docs"
+                        target="_blank" rel="noopener">Open Postman Documentation</a><a class="btn" href="#demo">Open
+                        Demo</a></div>
+            </div>
+            <aside class="card qa">
+                <div class="logo"><img src="https://content.pstmn.io/6eea5c8b-f51d-4b1c-8acd-b8799d80944e/cm91dGUucG5n"
+                        alt="Route Academy logo" onerror="this.replaceWith('ROUTE')"></div>
+                <h2 style="margin-top:14px">Quick Access</h2>
+                <a class="q" data-k="docs" target="_blank" rel="noopener">Postman Documentation</a><a class="q"
+                    href="#demo">Frontend Demo</a><a class="q" data-k="health" target="_blank" rel="noopener">API
+                    Health</a>
+                <div class="st">
+                    <div><b>2012</b>Founded</div>
+                    <div><b>40K+</b>Graduates</div>
+                    <div><b>5</b>Branches</div>
+                </div>
+            </aside>
+        </div>
+
+        <section class="card" id="about">
+            <h2 class="t">About Route Academy</h2>
+            <p class="sub">Egypt's Leading IT Training Center Since 2012</p>
+            <p style="margin:0">Route Academy is the premier IT training center in Egypt, established in 2012. We
+                specialize in delivering high-quality training courses in programming, web development, and application
+                development. We've identified the unique challenges people may face when learning new technology and
+                made efforts to provide strategies to overcome them.</p>
+            <div class="stats">
+                <div><b>2012</b>Founded</div>
+                <div><b>40K+</b>Graduates</div>
+                <div><b>50+</b>Partner Companies</div>
+                <div><b>5</b>Branches</div>
+                <div><b>20</b>Diplomas Available</div>
+            </div>
+        </section>
+        <section class="card" id="demo">
+            <h2 class="t">Live Demo</h2>
+            <p style="margin:0">Use this quick demo to verify the backend is reachable from your browser.</p>
+            <div class="run"><button class="btn p" id="hc" style="font-size:16px;padding:12px 18px">Run Health
+                    Check</button><code id="hs">Not executed yet</code></div>
+            <pre class="term" id="ho">Click "Run Health Check" to fetch /api/health...</pre>
+        </section>
+
+        <section class="card" id="workflow">
+            <h2 class="t">Testing Workflow</h2>
+            <ol>
+                <li>Open the Postman public documentation and fork the collection to your workspace.</li>
+                <li>Create a user with <code>POST /users/signup</code>, then sign in using
+                    <code>POST /users/signin</code>.
+                </li>
+                <li>Save <code>data.token</code> and send it as <code>Authorization: Bearer &lt;token&gt;</code> for
+                    protected routes.</li>
+                <li>Run the core journey: create post, comment/reply, like/bookmark/share, then check notifications.
+                </li>
+                <li>Validate pagination and filters using <code>page</code>, <code>limit</code>, <code>only</code>, and
+                    <code>cursor</code> where available.
+                </li>
+            </ol>
+            <div class="note">Free for testing and educational use. Not intended for production workloads.</div>
+        </section>
+
+        <section class="card" id="connect">
+            <h2 class="t">Connect With Route Academy</h2>
+            <p>Follow Route Academy and join the learning community.</p>
+            <div class="soc" id="soc"></div>
+        </section>
+
+        <section class="card" id="modules">
+            <h2 class="t">API Modules</h2>
+            <div class="tabs" role="tablist" id="tabs"></div>
+            <div class="tw">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Endpoint</th>
+                            <th>Purpose</th>
+                            <th>Auth</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card" id="contract">
+            <h2 class="t">Response Contract</h2>
+            <pre class="term">{
+  "success": true,
+  "message": "success",
+  "data": {},
+  "meta": {}
+}</pre>
+            <div style="height:14px"></div>
+            <pre class="term">{
+  "success": false,
+  "message": "Validation error message",
+  "errors": ["field error 1", "field error 2"]
+}</pre>
+        </section>
+    </div>
+
+    <footer>
+        <div class="w fg">
+            <div>
+                <h4 style="font-size:22px;color:#0a3d9c">route-posts</h4>
+                <p>Official Route Academy API learning playground for social app backend training and testing.</p>
+            </div>
+            <div>
+                <h4>Documentation</h4><a data-k="docs" target="_blank" rel="noopener">Postman Public Docs</a>
+            </div>
+            <div>
+                <h4>Platform</h4><a data-k="health" target="_blank" rel="noopener">API Health</a><a
+                    href="#modules">Endpoints</a><a href="#workflow">Quick Start</a>
+            </div>
+            <div>
+                <h4>Route Academy</h4><a data-s="Facebook" target="_blank" rel="noopener">Facebook</a><a
+                    data-s="LinkedIn" target="_blank" rel="noopener">LinkedIn</a><a data-s="Instagram" target="_blank"
+                    rel="noopener">Instagram</a>
+            </div>
+        </div>
+        <div class="w fb"><span>© 2026 Route Academy. All rights reserved.</span><span>Built for students and API
+                testing practice.</span></div>
+    </footer>
+    <div id="toast" role="status"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
